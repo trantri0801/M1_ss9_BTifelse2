@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT chuyển M sang Ft</title>
+</head>
+<body>
+
+</body>
+<script>
+    var M = prompt("Nhập vào mét");
+    if (isNaN(M) || M === "") {
+        alert("Nhập lại Mét");
+    } else {
+        var Ff = M * 3.2808399;
+        alert("" + Ff + "= " + M + " * 3.2808399");
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông khi biết 2 cạnh kề nhau</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = prompt("Nhập vào cạnh a");
+    var b = prompt("Nhập vào cạnh b");
+    if (isNaN(a) || a === "") {
+        alert("Nhập lại cạnh a");
+    } else if (isNaN(b) || b === "") {
+        alert("Nhập lại cạnh b");
+    } else if (a > 0 && b > 0){
+        var S = (a * b)/2;
+        alert("Diện tích hình tam giác vuông là: " + S);
+    } else {
+        alert("Nhập vào số âm, tán cái cho tỉnh")
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

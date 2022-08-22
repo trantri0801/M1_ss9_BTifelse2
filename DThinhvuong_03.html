@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tính diện tích hình vuông</title>
+</head>
+<body>
+
+</body>
+<script>
+    var canh = prompt("Nhập vào độ dài cạnh hình vuông");
+    if (isNaN(canh) || canh === "") {
+        alert("Nhập lại");
+    } else if (canh > 0){
+        var S = canh * canh;
+        alert("Diện tích hình vuông là: " + S);
+    } else {
+        alert("Cạnh hình vuông mà âm, ngáo ngơ vừa thôi");
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

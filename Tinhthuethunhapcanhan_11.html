@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<!--Diễn giải cách tính thuế TNCN:-->
+<!--Giảm trừ bản thân = 11.000.000-->
+
+<!--Giảm trừ người phụ thuộc = 1 x 4.400.000 = 4.400.000-->
+
+<!--Thu nhập chịu thuế = 16.000.000 - 11.000.000 - 4.400.000 = 600.000-->
+
+<!--+ Bậc 1: Thu nhập tính thuế đến 05 triệu đồng, thuế suất 5%:-->
+
+<!--600.000 × 5% = 30.000-->
+
+<!--Thuế thu nhập cá nhân = 30.000-->
+<!--đến 5tr: 5%-->
+<!--5tr đến 10tr:10%-->
+<!--10tr đến 18tr:15%-->
+<!--trên 18tr:20%-->
+</body>
+<script>
+    var a = prompt("Nhập vào tổng thu nhập tháng này");
+    var b = prompt("Nhập vào số người phụ thụ thuộc gia đình");
+    if (isNaN(a) || a === "" || a <=0) {
+        alert("Nhập lại tổng thu nhập tháng này");
+    } else if (isNaN(b) || b === "" || b < 0) {
+        alert("Nhập lại số người");
+    }
+    a = parseInt(a);
+    b = parseInt(b);
+    var c = (a - 11000000) - (b * 4400000);
+    if (c <= 0){
+        alert("Tháng này không chịu thuế TNCN");
+    } else if (0 < c <= 5000000){
+        var TNCN = c * 0.05;
+        alert("Số tiền phải đóng thuế TNCN là: " + TNCN);
+    } else if (5000000 < c <= 10000000) {
+        var TNCN = c * 0.05;
+        alert("Số tiền phải đóng thuế TNCN là: " + TNCN);
+    } else if (10000000 < c <= 18000000){
+        var TNCN = c * 0.1;
+        alert("Số tiền phải đóng thuế TNCN là: " + TNCN);
+    } else if (c > 18000000) {
+        var TNCN = c * 0.2;
+        alert("Số tiền phải đóng thuế TNCN là: " + TNCN);
+    }
+</script>
+</html>

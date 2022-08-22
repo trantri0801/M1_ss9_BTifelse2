@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT diện tích hình chữ nhật</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = prompt("Nhập vào chiều dài");
+    var b = prompt("Nhập vào chiều rộng");
+    if (isNaN(a) || a === "") {
+        alert("Nhập lại chiều dài");
+    } else if (isNaN(b) || b === "") {
+        alert("Nhập lại chiều rộng");
+    } else if (a < b) {
+        alert("Ngáo ngơ chiều rộng lớn hơn chiều dài hả, nhập lại");
+    } else if (a > 0 && b > 0){
+        var S = a * b;
+        alert("Diện tích hình chữ nhật là: " + S);
+    } else {
+        alert("Nhập vào số âm, tán cái cho tỉnh")
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Tính Giá Điện</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = prompt("Nhập vào chữ điện đầu kỳ");
+    var b = prompt("Nhập vào chữ điện cuối kỳ");
+    if (isNaN(a) || a === "") {
+        alert("Nhập lại chữ điện đầu kỳ");
+    } else if (isNaN(b) || b === "") {
+        alert("Nhập lại chữ điện cuối kỳ");
+    } else {
+        a = parseInt(a);
+        b = parseInt(b);
+        var c = b - a;
+        if (c <= 50) {
+            var tien = c * 1678;
+            alert("Tổng chữ điện là: " + c);
+            alert("Tiền điện tháng này là: " + tien);
+        } else if (50 < c <= 100) {
+            alert("Tổng chữ điện là: " + c);
+            var tien = 50 * 1678 + (c - 50) * 1734;
+            alert("Tiền điện tháng này là: " + tien);
+        } else if (c > 100) {
+            alert("Tổng chữ điện là: " + c);
+            var tien = (50 * 1678) + (50 * 1734) + ((c - 100) * 2014);
+            alert("Tiền điện tháng này là: " + tien);
+        }
+    }
+</script>
+</html>

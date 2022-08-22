@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT giải phương trình bậc 2</title>
+</head>
+<body>
+<!--ax2+bx+c=0 (a≠0)-->
+</body>
+<script>
+    var a = prompt("Nhập vào số a");
+    var b = prompt("Nhập vào số b");
+    var c = prompt("Nhập vào số c");
+    if (isNaN(a) || a === "" || a == 0) {
+        alert("Nhập lại số a");
+    } else if (isNaN(b) || b === "") {
+        alert("Nhập lại số b");
+    } else if (isNaN(c) || c === "") {
+        alert("Nhập lại số c");
+    } else {
+        var tam = (b*b) - (4 * a * c);
+        if (tam < 0){
+            alert("Phương trình vô nghiệm");
+        } else if (tam == 0){
+            var xkep = (-b/(2*a));
+            alert("Phương trình có nghiệm kép là: " + xkep);
+        } else if (tam > 0){
+            var x1 = (-b + Math.sqrt(tam))/(2*a);
+            var x2 = (-b - Math.sqrt(tam))/(2*a);
+            alert("Phương trình có hai nghiệm là x1= " + x1 + ", x2= " + x2);
+        }
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

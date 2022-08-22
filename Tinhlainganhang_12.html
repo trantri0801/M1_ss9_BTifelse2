@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Tính lãi ngân hàng</title>
+</head>
+<body>
+<!--Tiền lãi hàng tháng = dư nợ gốc x lãi suất vay/thời gian vay-->
+
+<!--Ví dụ, anh Nguyễn Văn A, vay 60 triệu, trong thời gian 12 tháng. Lãi suất ngân hàng là 12%/năm.-->
+
+<!--Theo đó, số tiền gốc anh A phải trả hàng tháng: 60 triệu/12 tháng = 5 triệu đồng.-->
+
+<!--Số lãi phải trả ngân hàng hàng tháng là: (60 triệu x 12%)/12 tháng = 600.000 đồng. Tổng số tiền anh A phải trả hàng tháng là 5,6 triệu đồng.-->
+</body>
+<script>
+    var a = prompt("Nhập vào số tiền muốn vay");
+    var b = prompt("Nhập vào % lãi xuất theo năm");
+    var c = prompt("Nhập vào số tháng vay");
+    if (isNaN(a) || a === "" || a <=0) {
+        alert("Nhập lại số tiền muốn vay");
+    } else if (isNaN(b) || b === "" || b < 0) {
+        alert("Nhập lại % lãi xuất theo năm");
+    } else if (isNaN(c) || c === "" || c < 0) {
+        alert("Nhập lại số tháng vay");
+    }
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    var tiengoc = a / c ;
+    var lai = (a * b/100)/c;
+    tiendong = tiengoc + lai;
+    alert("Số tiền phải trả mỗi tháng là: " + tiendong);
+</script>
+</html>

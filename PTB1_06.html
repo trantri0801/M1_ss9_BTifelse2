@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT giải phương trình bậc 1</title>
+</head>
+<body>
+<!--phương trình ax+b=0-->
+</body>
+<script>
+    var a = prompt("Nhập vào số a");
+    var b = prompt("Nhập vào số b");
+    if (isNaN(a) || a === "") {
+        alert("Nhập lại số a");
+    } else if (isNaN(b) || b === "") {
+        alert("Nhập lại số b");
+    } else if (a == 0 && b == 0){
+        alert("Phương trình có vô số nghiệm");
+    } else if (a == 0 && b != 0){
+        alert("Phương trình vô nghiệm");
+    } else if (a != 0){
+        var x = -b/a;
+        alert("Phương trình có nghiệm duy nhất là " + x);
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

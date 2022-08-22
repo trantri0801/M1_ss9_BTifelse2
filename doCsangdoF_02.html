@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT độ C sang độ F</title>
+</head>
+<body>
+
+</body>
+<script>
+    var C = prompt("Nhập vào độ C");
+    if (isNaN(C) || C === "") {
+        alert("Nhập lại độ C");
+    } else {
+        var F = C * 1.8 + 32;
+        alert("Độ " + C + " = độ " + F );
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

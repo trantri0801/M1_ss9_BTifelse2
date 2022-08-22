@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập kiểm tra cạnh của tam giác</title>
+</head>
+<body>
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+</body>
+<script>
+    var a = prompt("Nhập vào cạnh a");
+    var b = prompt("Nhập vào cạnh b");
+    var c = prompt("Nhập vào cạnh c");
+    if (isNaN(a) || a === "" || a <= 0) {
+        alert("Nhập lại cạnh a");
+    } else if (isNaN(b) || b === "" || b <= 0) {
+        alert("Nhập lại cạnh b");
+    } else if (isNaN(c) || c === "" || c <= 0) {
+        alert("Nhập lại cạnh c");
+    } else {
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            alert("True");
+        } else {
+            alert("False");
+        }
+    }
+</script>
+</html>
